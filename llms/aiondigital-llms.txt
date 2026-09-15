@@ -1,0 +1,60 @@
+# Aion Digital
+
+> Aion Digital is a Bahrain-headquartered digital banking platform vendor, operated by Waqfe W.L.L
+> and founded in 2017, selling bank-in-a-box software to financial institutions across the GCC and
+> Pakistan. Product lines: eKYC and digital onboarding, retail digital banking, corporate digital
+> banking, an AI layer (Aion Hikmah), and the Aion Rubix platform.
+
+generated: 2026-09-14
+method: generated
+source: API Evangelist enrichment pass over all/aiondigital (apis.yml + repo artifacts); no
+provider-published /llms.txt exists (https://aiondigital.com/llms.txt returns 404).
+
+## What an agent can and cannot do here
+
+Aion Digital has **no public API**. It markets an API platform — the Aion Rubix page lists an API
+gateway, "API management with API analytics", microservices/containers and modular middleware with
+pre-integrations — and a 2019 Open Bank Project partnership gave its bank customers an API catalogue
+of 200+ APIs plus a sandbox. None of that is reachable by a third party. There is no developer
+portal, no API reference, no OpenAPI/AsyncAPI/GraphQL/SOAP contract, no sandbox signup, no API key
+issuance and no published pricing. Every developer-facing call to action is "Request a demo",
+routing to https://aiondigital.com/contact/.
+
+The API surfaces Aion Digital builds are deployed inside its customers' banks. An agent evaluating
+this company should treat it as a vendor to integrate with under contract, not as an API to call.
+
+## Company
+
+- [Website](https://aiondigital.com/): Company home.
+- [About Us](https://aiondigital.com/about-us/): Founded 2017, ~150 staff, HQ Bahrain with offices in Saudi Arabia, Kuwait, UAE and Pakistan; leadership, board and awards.
+- [Contact](https://aiondigital.com/contact/): info@aiondigital.com, +973 3600 9813, four regional addresses. This is the only support channel published.
+- [Privacy Policy](https://aiondigital.com/privacy-policy/): States the site is owned and operated by Waqfe W.L.L, incorporated in the Kingdom of Bahrain.
+- [LinkedIn](https://www.linkedin.com/company/aiondigital)
+
+## Products
+
+- [Aion Rubix](https://aiondigital.com/aion-rubix/): Next-generation digital-native platform. Component catalogue includes an API platform, API gateway, journey orchestration and pre-integrated middleware. FaaS/BaaS positioning.
+- [eKYC & Digital Onboarding](https://ekyc.aiondigital.com/): Selfie/liveness verification, ID and passport cross-validation, MRZ scanning, forgery detection, AML screening, 150 pre-configured IDs and passports. Offered as consultancy, a mobile/web SDK, a platform deployment, or an integration engagement — none of them self-serve.
+- [Retail Digital Banking](https://aiondigital.com/retail-digital-banking/)
+- [Corporate Digital Banking](https://aiondigital.com/corporate-digital-banking/)
+- [Artificial Intelligence](https://aiondigital.com/artificial-intelligence/): The Aion Hikmah AI layer.
+- [Open Banking](https://aiondigital.com/open-banking/): Delivered through Spire Technologies (spiretech.co), described on the page as "an investment of Aion Digital". Spire is a separate company and its contracts are not attributed to Aion Digital.
+
+## Public code
+
+- [@aiondigital/opentelemetry](https://www.npmjs.com/package/@aiondigital/opentelemetry): v1.0.3, published 2023-11-30. Internal OpenTelemetry wrapper for Node.js microservices.
+- [@aiondigital/messaging-queues](https://www.npmjs.com/package/@aiondigital/messaging-queues): v1.1.5, published 2024-04-29. Message-broker abstraction; the repo name (rubix-messaging-queues) ties it to Aion Rubix.
+- [AionlyticsSDK](https://github.com/aiondigitalengineering/AionlyticsSDK): Swift iOS analytics framework, unversioned (no tags, releases, Package.swift or podspec). A thin Firebase Analytics wrapper; it calls no Aion Digital endpoint.
+
+None of these three is a client library for an Aion Digital API.
+
+## Content
+
+- [Resources — Blogs](https://aiondigital.com/resources/?tab=blogs): Blogs, webinars, vlogs and press. Most recent dated content is 2022.
+- [RSS feed](https://aiondigital.com/feed/): Press coverage; latest item 2020-03-18.
+
+## Optional
+
+- [GitHub — Aion Digital](https://github.com/aiondigital): Brand organization, zero public repositories.
+- [GitHub — Aion Digital Engineering](https://github.com/aiondigitalengineering): Two public repositories.
+- [API Evangelist profile](https://apis.io/provider/aiondigital)

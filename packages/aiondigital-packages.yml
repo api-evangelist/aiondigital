@@ -1,0 +1,72 @@
+generated: '2026-09-14'
+method: searched
+source: >-
+  https://registry.npmjs.org/-/v1/search (npm scope @aiondigital), registry metadata for each
+  package, and the GitHub organizations github.com/aiondigital and
+  github.com/aiondigitalengineering
+note: >-
+  Aion Digital publishes no client SDK for any Aion Digital API, because it publishes no public
+  API. What it does publish is internal platform code: two npm packages under its own
+  @aiondigital scope and one iOS analytics framework in its engineering GitHub org. No
+  `SDKs` pointer is emitted in apis.yml on purpose — sdk_count is meant to count developer-facing
+  client libraries that wrap a provider's API, and none of these three do. PyPI, RubyGems,
+  Packagist, crates.io, NuGet, Maven Central and pkg.go.dev returned nothing first-party.
+ownership_check: >-
+  The @aiondigital npm scope, the github.com/aiondigital organization (name "Aion Digital",
+  blog www.aiondigital.com, location Bahrain) and github.com/aiondigitalengineering (name
+  "Aion Digital Engineering") are all first-party. The messaging-queues source repository sits
+  in a maintainer's personal GitHub account (wjamilaion) but the package is published under the
+  company scope by the same npm maintainer as the opentelemetry package.
+package_count: 3
+packages:
+- name: '@aiondigital/opentelemetry'
+  registry: npm
+  official: true
+  language: TypeScript
+  url: https://www.npmjs.com/package/@aiondigital/opentelemetry
+  repository: https://github.com/aiondigitalengineering/opentelemetry
+  version: 1.0.3
+  published: '2023-11-30'
+  first_published: '2023-10-20'
+  release_count: 4
+  license: ISC
+  description: OpenTelemetry SDK for Node.js based microservices.
+  kind: internal-platform-library
+  note: >-
+    Internal observability wrapper for the company's own Node.js microservices, not a client
+    library for an Aion Digital API. Last release 2023-11-30 — nearly three years stale as of
+    this pass.
+- name: '@aiondigital/messaging-queues'
+  registry: npm
+  official: true
+  language: JavaScript
+  url: https://www.npmjs.com/package/@aiondigital/messaging-queues
+  repository: https://github.com/wjamilaion/rubix-messaging-queues
+  version: 1.1.5
+  published: '2024-04-29'
+  first_published: '2023-10-15'
+  release_count: 14
+  license: ISC
+  description: Messaging queue abstraction over different message brokers.
+  kind: internal-platform-library
+  note: >-
+    Repository name (rubix-messaging-queues) ties this to the Aion Rubix platform. Internal
+    broker abstraction, not a client SDK. Last release 2024-04-29.
+- name: AionlyticsSDK
+  registry: none
+  official: true
+  language: Swift
+  url: https://github.com/aiondigitalengineering/AionlyticsSDK
+  repository: https://github.com/aiondigitalengineering/AionlyticsSDK
+  version: null
+  published: null
+  license: null
+  description: Aion Analytics Framework for iOS.
+  kind: first-party-mobile-sdk
+  note: >-
+    version is null because the distribution is unversioned, not because it was unchecked: the
+    repository carries no git tags, no GitHub releases, no Package.swift and no podspec, so it
+    is consumed by cloning a moving branch and a consumer cannot tell what they are getting.
+    Source inspection shows it is a thin wrapper over Firebase Analytics with a
+    prd/stg/tst/dev environment enum — it contacts no Aion Digital endpoint, which is why no
+    base URL could be derived from it. Repo created 2025-04-18, last push 2025-04-28.

@@ -1,0 +1,75 @@
+generated: '2026-09-14'
+method: probed
+source: live HTTPS probes of the named /.well-known/ path list on every host this record knows
+note: >-
+  Every named path returned a clean 404 (a WordPress 404 page, text/html) on all three
+  reachable Aion Digital hosts. No WellKnown or SecurityTxt pointer is emitted in apis.yml,
+  because a recorded absence is not a served surface. No API host exists to probe beyond
+  these: api., apis., developer., docs., portal., sandbox., openbanking., rubix. and app.
+  under aiondigital.com are all NXDOMAIN.
+hosts:
+- host: aiondigital.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+- host: www.aiondigital.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+- host: ekyc.aiondigital.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+agent_card_probe:
+  note: >-
+    STEP 0b/3c A2A probe. /.well-known/agent-card.json and /.well-known/agent.json both
+    returned 404 on aiondigital.com and ekyc.aiondigital.com. No card, so no a2a/ artifact
+    and no AgentCard pointer is written.
+  probes:
+  - url: https://aiondigital.com/.well-known/agent-card.json
+    status: 404
+  - url: https://aiondigital.com/.well-known/agent.json
+    status: 404
+  - url: https://ekyc.aiondigital.com/.well-known/agent-card.json
+    status: 404
+  - url: https://ekyc.aiondigital.com/.well-known/agent.json
+    status: 404

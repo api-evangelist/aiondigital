@@ -1,0 +1,20 @@
+generated: '2026-09-14'
+method: searched
+source: https://aiondigital.com/aion-rubix/
+note: >-
+  No rate limits are published. Aion Digital markets an API gateway and "API management with
+  API analytics" as components of the Aion Rubix platform, but there is no public developer
+  portal, no API reference and no machine-readable contract, so no quota, window, burst or
+  RateLimit-* response header could be observed or read. This is a zero because the provider
+  publishes nothing on the subject, not because limits were assumed absent.
+limit_count: 0
+rate_limits: []
+headers: []
+evidence:
+- url: https://aiondigital.com/aion-rubix/
+  status: 200
+  detail: names an "API Platform — API management with API analytics" component, with no limits stated
+- url: https://aiondigital.com/openapi.json
+  status: 404
+- url: https://aiondigital.com/api-docs
+  status: 404

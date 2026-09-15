@@ -1,4 +1,4 @@
-# Aiondigital
+# Aion Digital
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,27 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aiondigital is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
+Aion Digital is a Bahrain-headquartered digital banking platform vendor, operated by
+Waqfe W.L.L and founded in 2017, selling bank-in-a-box software to financial institutions
+across the GCC and Pakistan — eKYC and digital onboarding, retail and corporate digital
+banking, an AI layer (Aion Hikmah), and the Aion Rubix platform.
+
+**No public API surface.** Aion Digital markets an API gateway, "API management with API
+analytics" and, via a 2019 Open Bank Project partnership, a 200+ API catalogue with a
+sandbox — but publishes no developer portal, no API reference and no machine-readable
+contract. Every developer-facing call to action is "Request a demo". `api.`, `apis.`,
+`developer.`, `developers.`, `docs.`, `portal.`, `sandbox.`, `openbanking.`, `rubix.` and
+`app.` under `aiondigital.com` are all NXDOMAIN, and `/openapi.json`, `/swagger.json`,
+`/api-docs`, `/llms.txt`, `/apis.json` and every named `/.well-known/` path return 404 on
+all three reachable hosts. The API surfaces Aion Digital builds are deployed inside its
+bank customers' environments. Recorded as `x-coverage: gated / sales-gate`.
+
+The open-banking arm on that page, **Spire Technologies** (spiretech.co), is described by
+Aion Digital as "an investment of Aion Digital"; it is a separate company running on its own
+domain over Salt Edge, so none of its contracts are attributed here.
+
+- https://aiondigital.com/
+- https://ekyc.aiondigital.com/
+- https://github.com/aiondigital
+- https://github.com/aiondigitalengineering
 - https://equityzen.com/company/aiondigital

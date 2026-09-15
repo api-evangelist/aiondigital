@@ -1,0 +1,21 @@
+generated: '2026-09-14'
+method: searched
+source: https://aiondigital.com/
+note: >-
+  Aion Digital publishes no pricing page and no plans. The site has no /pricing, /plans or
+  /packages route in its Yoast sitemap, and every commercial call to action across
+  aiondigital.com and ekyc.aiondigital.com is "Request a demo" / "Book a demo" routing to
+  https://aiondigital.com/contact/. This is an enterprise contact-sales motion: pricing is
+  negotiated per bank engagement and is not published.
+plan_count: 0
+plans: []
+evidence:
+- url: https://aiondigital.com/sitemap_index.xml
+  status: 200
+  detail: page-sitemap.xml contains no pricing or plans page
+- url: https://aiondigital.com/aion-rubix/
+  status: 200
+  detail: 'platform page CTA is "Book a demo" / "REQUEST A DEMO"'
+- url: https://aiondigital.com/contact/
+  status: 200
+  detail: contact page carries only addresses, info@aiondigital.com and a WhatsApp number

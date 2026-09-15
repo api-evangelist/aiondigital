@@ -1,17 +1,42 @@
 aid: aiondigital
-name: Aiondigital
-description: 'Aiondigital is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: Aion Digital
+description: 'Aion Digital is a Bahrain-headquartered digital banking platform vendor,
+  operated by Waqfe W.L.L and founded in 2017, that sells bank-in-a-box software to
+  financial institutions across the GCC and Pakistan. Its product lines are eKYC and
+  digital onboarding, retail digital banking, corporate digital banking, an AI layer
+  (Aion Hikmah) and the Aion Rubix platform, whose marketed components include an API
+  gateway, an API management and analytics platform, and modular middleware with
+  pre-integrations. Aion Digital markets an API platform and, through a 2019 Open Bank
+  Project partnership, an API catalogue and sandbox delivered to its bank customers,
+  but it publishes no public developer portal, API reference, or machine-readable
+  contract of its own: every developer-facing call to action on aiondigital.com and
+  ekyc.aiondigital.com is "Request a demo". The one public first-party code it does
+  ship is a small set of internal platform libraries on npm and an iOS analytics
+  framework on GitHub.'
 url: https://raw.githubusercontent.com/api-evangelist/aiondigital/refs/heads/main/apis.yml
+image: https://aiondigital.com/wp-content/uploads/2022/07/cropped-Artboard-1-192x192.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: 'enrichment pass 2026-09-14: full STEP 0b contract discovery run across
+  aiondigital.com, www.aiondigital.com and ekyc.aiondigital.com; no public API surface,
+  developer portal or machine-readable contract found — sales-gated'
 specificationVersion: '0.20'
 created: '2026-09-14'
 modified: '2026-09-14'
 tags:
 - Company
+- Banking
+- Financial Services
+- Digital Banking
+- FinTech
+- Open Banking
+- eKYC
+- Identity Verification
+- Onboarding
+- Artificial Intelligence
+- Bahrain
+- Middle East
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +44,55 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aiondigital-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aiondigital
+  url: https://aiondigital.com/
+- type: About
+  url: https://aiondigital.com/about-us/
+- type: Support
+  url: https://aiondigital.com/contact/
+- type: Blog
+  url: https://aiondigital.com/resources/?tab=blogs
+- type: BlogRSS
+  url: https://aiondigital.com/feed/
+- type: PrivacyPolicy
+  url: https://aiondigital.com/privacy-policy/
+- type: GitHubOrganization
+  url: https://github.com/aiondigital
+- type: LinkedIn
+  url: https://www.linkedin.com/company/aiondigital
+- type: Packages
+  url: packages/aiondigital-packages.yml
+- type: LLMsTxt
+  url: llms/aiondigital-llms.txt
+- type: Plans
+  url: plans/aiondigital-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/aiondigital-rate-limits.yml
+- type: Conformance
+  url: conformance/aiondigital-conformance.yml
+x-enrichment:
+  date: '2026-09-14'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v3
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    Aion Digital markets an API gateway, "API management with API analytics" and — via a 2019
+    Open Bank Project partnership — a 200+ API catalogue with a sandbox, but publishes no
+    developer route to any of it: every call to action on aiondigital.com and
+    ekyc.aiondigital.com is "Request a demo", and api., apis., developer., developers., docs.,
+    portal., sandbox., openbanking., rubix. and app. under aiondigital.com are all NXDOMAIN.
+  evidence:
+  - url: https://aiondigital.com/aion-rubix/
+    status: 200
+  - url: https://aiondigital.com/openapi.json
+    status: 404
+  - url: https://aiondigital.com/.well-known/api-catalog
+    status: 404
+  - url: https://aiondigital.com/llms.txt
+    status: 404
+  checked: '2026-09-14'

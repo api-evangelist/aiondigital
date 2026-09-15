@@ -1,0 +1,73 @@
+generated: '2026-09-14'
+method: searched
+source: >-
+  https://aiondigital.com/, https://aiondigital.com/aion-rubix/,
+  https://aiondigital.com/open-banking/, https://ekyc.aiondigital.com/,
+  https://ekyc.aiondigital.com/features/
+note: >-
+  Aion Digital publishes no machine-readable contract, so nothing here is derived from a spec.
+  Every entry is read from the provider's own public marketing pages and is graded on whether
+  the claim could be corroborated. No `Compliance` pointer is emitted in apis.yml: no SOC 2,
+  ISO 27001, PCI DSS, HIPAA or FedRAMP attestation, no trust centre, and no certification
+  registry entry was found on any Aion Digital host (probe-security-programs.py returned
+  vdp=none trust=none).
+domain_standard:
+  sector: banking
+  finding: none-declared
+  note: >-
+    7b domain-standard signature check. The banking regime's standards (PSD2/OBIE, FDX,
+    Berlin Group NextGenPSD2, ISO 20022, FAPI) are all contract-declared standards, and Aion
+    Digital publishes no contract to declare one in. Its open-banking positioning points at
+    the Bahrain CBB Open Banking Framework and at the Open Bank Project software it resells to
+    banks, but the conforming surface in either case is the bank's deployment, not an Aion
+    Digital endpoint. Reward-only check: recorded as absent, not as a failure.
+conformance:
+- id: fido
+  name: FIDO Authentication
+  conforms: false
+  claimed: true
+  evidence: https://ekyc.aiondigital.com/
+  detail: >-
+    The eKYC homepage badge reads "CERTIFIED BY FIDO Authentication" and the features page
+    advertises "World-class Biometric Authentication" and FIDO-certified biometric, document
+    and database checks. Recorded as claimed but unverified — no Aion Digital or Waqfe entry
+    was found in the FIDO Alliance certified-products directory, and the company's own press
+    record attributes its biometric layer to a partnership with Daon (IdentityX), which is
+    itself FIDO certified. The certification may therefore belong to the supplier rather than
+    to Aion Digital.
+- id: aml-screening
+  name: AML / sanctions screening
+  conforms: false
+  claimed: true
+  evidence: https://ekyc.aiondigital.com/features/
+  detail: >-
+    Page claims "AML Screening for Individuals and Businesses", ongoing AML and geo-location
+    verification, and "AML alignment & synchronization with Global standards". No named
+    standard, regulator, list provider or attestation is given, so there is nothing to verify.
+- id: cbb-open-banking
+  name: Bahrain CBB Open Banking Framework
+  conforms: false
+  claimed: true
+  evidence: https://aiondigital.com/open-banking/
+  detail: >-
+    Aion Digital markets open-banking readiness for CBB-regulated banks, delivered partly
+    through a 2019 Open Bank Project partnership (API management, an API catalogue of 200+
+    APIs, and a sandbox) and partly through Spire Technologies, which the page describes as
+    "an investment of Aion Digital". Neither surface is served from an Aion Digital host:
+    Spire runs on spiretech.co and its account-information stack resolves to Salt Edge
+    (docs.saltedge.com). No conformance is attributed to Aion Digital here.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence: https://aiondigital.com/.well-known/oauth-authorization-server
+  detail: 404. No authorization-server metadata on any Aion Digital host, and no contract declaring an oauth2 securityScheme.
+- id: oidc
+  name: OpenID Connect
+  conforms: false
+  evidence: https://aiondigital.com/.well-known/openid-configuration
+  detail: 404 on aiondigital.com, www.aiondigital.com and ekyc.aiondigital.com.
+- id: rfc9457
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence: https://aiondigital.com/openapi.json
+  detail: 404. No contract to inspect for application/problem+json responses.
