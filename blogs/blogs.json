@@ -1,0 +1,15 @@
+{
+  "repo": "aiondigital",
+  "feeds": [
+    {
+      "source": "https://aiondigital.com/contact/",
+      "error": "HTTPError"
+    },
+    {
+      "source": "https://aiondigital.com/resources/?tab=blogs",
+      "error": "HTTPError"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-09-19T20:17:39Z"
+}
