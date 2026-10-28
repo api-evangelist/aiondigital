@@ -64,27 +64,95 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aion Digital is a Bahrain-headquartered digital banking platform vendor, operated by
-Waqfe W.L.L and founded in 2017, selling bank-in-a-box software to financial institutions
-across the GCC and Pakistan — eKYC and digital onboarding, retail and corporate digital
-banking, an AI layer (Aion Hikmah), and the Aion Rubix platform.
+Aion Digital is a Bahrain-headquartered digital banking platform vendor, operated by Waqfe W.L.L and founded in 2017, that sells bank-in-a-box software to financial institutions across the GCC and Pakistan. Its product lines are eKYC and digital onboarding, retail digital banking, corporate digital banking, an AI layer (Aion Hikmah) and the Aion Rubix platform, whose marketed components include an API gateway, an API management and analytics platform, and modular middleware with pre-integrations. Aion Digital markets an API platform and, through a 2019 Open Bank Project partnership, an API catalogue and sandbox delivered to its bank customers, but it publishes no public developer portal, API reference, or machine-readable contract of its own: every developer-facing call to action on aiondigital.com and ekyc.aiondigital.com is "Request a demo". The one public first-party code it does ship is a small set of internal platform libraries on npm and an iOS analytics framework on GitHub.
 
-**No public API surface.** Aion Digital markets an API gateway, "API management with API
-analytics" and, via a 2019 Open Bank Project partnership, a 200+ API catalogue with a
-sandbox — but publishes no developer portal, no API reference and no machine-readable
-contract. Every developer-facing call to action is "Request a demo". `api.`, `apis.`,
-`developer.`, `developers.`, `docs.`, `portal.`, `sandbox.`, `openbanking.`, `rubix.` and
-`app.` under `aiondigital.com` are all NXDOMAIN, and `/openapi.json`, `/swagger.json`,
-`/api-docs`, `/llms.txt`, `/apis.json` and every named `/.well-known/` path return 404 on
-all three reachable hosts. The API surfaces Aion Digital builds are deployed inside its
-bank customers' environments. Recorded as `x-coverage: gated / sales-gate`.
+**Areas:** Company · Banking · Financial Services · Digital Banking · Fintech · Open Banking · eKYC · Identity Verification · Onboarding · Artificial Intelligence · Bahrain · Middle East
 
-The open-banking arm on that page, **Spire Technologies** (spiretech.co), is described by
-Aion Digital as "an investment of Aion Digital"; it is a separate company running on its own
-domain over Salt Edge, so none of its contracts are attributed here.
+## Aion Digital on APIs.io
 
-- https://aiondigital.com/
-- https://ekyc.aiondigital.com/
-- https://github.com/aiondigital
-- https://github.com/aiondigitalengineering
-- https://equityzen.com/company/aiondigital
+Everything profiled for Aion Digital is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aiondigital/](https://apis.io/providers/aiondigital/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aiondigital Domain Security](https://apis.io/security/aiondigital/aiondigital-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Aiondigital Plans Pricing](https://apis.io/plans/aiondigital/aiondigital-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Aiondigital Rate Limits](https://apis.io/rate-limits/aiondigital/aiondigital-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aiondigital.com/)
+- [Support](https://aiondigital.com/contact/)
+- [Blog](https://aiondigital.com/resources/?tab=blogs)
+- [Privacy policy](https://aiondigital.com/privacy-policy/)
+- [GitHub](https://github.com/aiondigital)
+
+## API Evangelist rating
+
+**Kin Score 8.0** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 10.5 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.1** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aiondigital/](https://apis.io/providers/aiondigital/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Aion Digital: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aiondigital/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
